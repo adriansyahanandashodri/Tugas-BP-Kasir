@@ -1,0 +1,32 @@
+package programkasirsederhana;
+import java.util.Scanner;
+public class Programkasirsederhana {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        //Variable
+        double jumlahberas,hargaperKg,totalharga, diskon, hargasetelahdiskon, kembalian, uangditerima;
+        System.out.println("Program Kasir Sederhana");
+        System.out.print("Masukkan jumlah beras dibeli (kg)");
+        jumlahberas = input.nextDouble();
+        System.out.print("Masukkan harga beras per kg : ");
+        hargaperKg = input.nextDouble();
+        //total harga sebelum di diskon
+        totalharga = jumlahberas * hargaperKg;
+        System.out.println("total harga sebelum diskon : " + totalharga);
+        //diskon 10%
+        diskon = 0.10 * totalharga;
+        System.out.println("diskon : " + diskon);
+        //harga setelah diskon
+        hargasetelahdiskon = totalharga - diskon;
+        System.out.println("total harga setelah diskon 10% : " + hargasetelahdiskon);
+        //uang yang dibayar
+        System.out.println("Masukkan uang yang diterima");
+        uangditerima = input.nextDouble();
+        //uang kembalian
+        kembalian = uangditerima - hargasetelahdiskon ;
+        System.out.println("kembalian : "+kembalian);
+        
+    }
+    
+}
